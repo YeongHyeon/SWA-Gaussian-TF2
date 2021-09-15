@@ -30,7 +30,7 @@ TensorFlow implementation of "A Simple Baseline for Bayesian Uncertainty in Deep
 |:---|:---:|:---:|:---:|:---:|
 |Final Epoch|0.99230|0.99231|0.99222|0.99226|
 |Best Loss|0.99350|0.99350|0.99338|0.99344|
-|SWAG|0.99310|0.99305|0.99299|0.99302|
+|SWAG (S = 30)|0.99310|0.99305|0.99299|0.99302|
 |SWAG (Last Momentum)|0.99340|0.99340|0.99330|0.99335|
 
 ## Requirements
