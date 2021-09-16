@@ -15,15 +15,34 @@ TensorFlow implementation of "A Simple Baseline for Bayesian Uncertainty in Deep
 
 ## Results
 
-The red color and the blue color represent the initial state and current state respectively.  
-
-|Variable|MNIST|CIFAR10|
-|:---|:---:|:---:|:---:|:---:|
-|<img src="./figures/symbols/theta.gif" width="10">|<img src="./figures/MNIST/weights.gif" width="400">|<img src="./figures/CIFAR10/weights.gif" width="400">|
-|<img src="./figures/symbols/theta_1.gif" width="10">|<img src="./figures/MNIST/theta_1.gif" width="400">|<img src="./figures/CIFAR10/theta_1.gif" width="400">|
-|<img src="./figures/symbols/theta_to_theta_1.gif" width="45">|<img src="./figures/MNIST/weights_to_theta1.gif" width="400">|<img src="./figures/CIFAR10/weights_to_theta1.gif" width="400">|
-|<img src="./figures/symbols/theta_2.gif" width="17">|<img src="./figures/MNIST/theta_2.gif" width="400">|<img src="./figures/CIFAR10/theta_2.gif" width="400">|
-
+<table>
+  <p>The red color and the blue color represent the initial state and current state respectively.</p>  
+  <tr>
+    <td><strong>Variable</strong></td>
+    <td><strong>MNIST</strong></td>
+    <td><strong>CIFAR10</strong></td>
+  </tr>
+  <tr>
+    <td><img src="./figures/symbols/theta.gif" width="10"></td>
+    <td><img src="./figures/MNIST/weights.gif" width="400"></td>
+    <td><img src="./figures/CIFAR10/weights.gif" width="400"></td>
+  </tr>
+  <tr>
+    <td><img src="./figures/symbols/theta_1.gif" width="10"></td>
+    <td><img src="./figures/MNIST/theta_1.gif" width="400"></td>
+    <td><img src="./figures/CIFAR10/theta_1.gif" width="400"></td>
+  </tr>
+  <tr>
+    <td><img src="./figures/symbols/theta_to_theta_1.gif" width="45"></td>
+    <td><img src="./figures/MNIST/weights_to_theta1.gif" width="400"></td>
+    <td><img src="./figures/CIFAR10/weights_to_theta1.gif" width="400"></td>
+  </tr>
+  <tr>
+    <td><img src="./figures/symbols/theta_2.gif" width="17"></td>
+    <td><img src="./figures/MNIST/theta_2.gif" width="400"></td>
+    <td><img src="./figures/CIFAR10/theta_2.gif" width="400"></td>
+  </tr>
+</table>
 
 ## Performance
 
