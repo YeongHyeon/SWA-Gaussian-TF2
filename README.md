@@ -14,22 +14,16 @@ TensorFlow implementation of "A Simple Baseline for Bayesian Uncertainty in Deep
 </div>
 
 ## Results
-<div align="center">
-  <img src="./figures/smce.svg" width="450">  
-  <p>Loss convergence within training procedure.</p>
-</div>
 
-<div align="center">
-  <img src="./figures/weights.gif" width="400">  
-  <img src="./figures/weights_to_theta1.gif" width="400">
-  <p>Histogram change of <strong>&theta;</strong> without stochastic weight averaging and difference between <strong>&theta;</strong> and <strong>bar(&theta;)</strong>.</p>
-</div>
+The red color and the blue color represent the initial state and current state respectively.  
 
-<div align="center">
-  <img src="./figures/theta_1.gif" width="400">  
-  <img src="./figures/theta_2.gif" width="400">  
-  <p>Histogram change of <strong>bar(&theta;)</strong> and <strong>bar(&theta;^2)</strong> sequentially. The red color and the blue color represent the initial state and current state respectively.</p>
-</div>
+|Variable|MNIST|CIFAR10|
+|:---|:---:|:---:|:---:|:---:|
+|<img src="./figures/symbols/theta.gif" width="10">|<img src="./figures/MNIST/weights.gif" width="400">|<img src="./figures/CIFAR10/weights.gif" width="400">|
+|<img src="./figures/symbols/theta_1.gif" width="10">|<img src="./figures/MNIST/theta_1.gif" width="400">|<img src="./figures/CIFAR10/theta_1.gif" width="400">|
+|<img src="./figures/symbols/theta_to_theta_1.gif" width="45">|<img src="./figures/MNIST/weights_to_theta1.gif" width="400">|<img src="./figures/CIFAR10/weights_to_theta1.gif" width="400">|
+|<img src="./figures/symbols/theta_2.gif" width="17">|<img src="./figures/MNIST/theta_2.gif" width="400">|<img src="./figures/CIFAR10/theta_2.gif" width="400">|
+
 
 ## Performance
 
