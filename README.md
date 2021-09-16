@@ -22,13 +22,13 @@ TensorFlow implementation of "A Simple Baseline for Bayesian Uncertainty in Deep
 <div align="center">
   <img src="./figures/weights.gif" width="400">  
   <img src="./figures/weights_to_theta1.gif" width="400">
-  <p>Histogram change of &theta; without stochastic weight averaging and difference between &theta; and &theta;_SWA.</p>
+  <p>Histogram change of <strong>&theta;</strong> without stochastic weight averaging and difference between <strong>&theta;</strong> and <strong>bar(&theta;)</strong>.</p>
 </div>
 
 <div align="center">
   <img src="./figures/theta_1.gif" width="400">  
   <img src="./figures/theta_2.gif" width="400">  
-  <p>Histogram change of &theta;_SWA and &sum;_diag sequentially. The red color and the blue color represent the initial state and current state respectively.</p>
+  <p>Histogram change of <strong>bar(&theta;)</strong> and <strong>bar(&theta;^2)</strong> sequentially. The red color and the blue color represent the initial state and current state respectively.</p>
 </div>
 
 ## Performance
