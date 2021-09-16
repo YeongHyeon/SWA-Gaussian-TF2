@@ -32,12 +32,23 @@ TensorFlow implementation of "A Simple Baseline for Bayesian Uncertainty in Deep
 </div>
 
 ## Performance
+
+### MNIST
 |Method|Accuracy|Precision|Recall|F1-Score|
 |:---|:---:|:---:|:---:|:---:|
 |Final Epoch|0.99230|0.99231|0.99222|0.99226|
-|Best Loss|0.99350|0.99350|0.99338|0.99344|
+|Best Loss|<strong>0.99350</strong>|<strong>0.99350</strong>|<strong>0.99338</strong>|<strong>0.99344</strong>|
 |SWAG (S = 30)|0.99310|0.99305|0.99299|0.99302|
 |SWAG (Last Momentum)|0.99340|0.99340|0.99330|0.99335|
+
+### CIFAR10
+|Method|Accuracy|Precision|Recall|F1-Score|
+|:---|:---:|:---:|:---:|:---:|
+|Final Epoch|0.73130|0.73349|0.73130|0.73147|
+|Best Loss|0.73240|0.73205|0.73240|0.73099|
+|SWAG (S = 30)|<strong>0.74100</strong>|<strong>0.74622</strong>|<strong>0.74100</strong>|<strong>0.74260</strong>|
+|SWAG (Last Momentum)|0.73490|0.73888|0.73490|0.73561|  
+
 
 ## Requirements
 * Python 3.7.6  
