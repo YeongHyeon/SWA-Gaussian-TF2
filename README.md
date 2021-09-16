@@ -21,7 +21,8 @@ TensorFlow implementation of "A Simple Baseline for Bayesian Uncertainty in Deep
 
 <div align="center">
   <img src="./figures/weights.gif" width="400">  
-  <p>Histogram change of pure weights without stochastic weight averaging.</p>
+  <img src="./figures/weights_to_theta1.gif" width="400">
+  <p>Histogram change of pure weights without stochastic weight averaging and difference between weight to &theta;.</p>
 </div>
 
 <div align="center">
