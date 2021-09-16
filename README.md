@@ -1,16 +1,16 @@
 [TensorFlow 2] A Simple Baseline for Bayesian Uncertainty in Deep Learning: SWA-Gaussian (SWAG)
 =====
-TensorFlow implementation of "A Simple Baseline for Bayesian Uncertainty in Deep Learning" [1]
+TensorFlow implementation of "A Simple Baseline for Bayesian Uncertainty in Deep Learning"
 
 ## Concept
 <div align="center">
   <img src="./figures/algorithm.png" width="750">  
-  <p>Algorithm to utilize the SWAG.</p>
+  <p>Algorithm to utilize the SWAG [1].</p>
 </div>
 
 <div align="center">
   <img src="./figures/swag_sampling.png" width="750">  
-  <p>Equation for the weight sampling from SWAG.</p>
+  <p>Equation for the weight sampling from SWAG [1].</p>
 </div>
 
 ## Results
