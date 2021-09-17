@@ -67,7 +67,7 @@ TensorFlow implementation of "A Simple Baseline for Bayesian Uncertainty in Deep
 * Python 3.7.6  
 * Tensorflow 2.3.0  
 * Numpy 1.18.15
-* whiteboxlayer 0.1.13
+* <a>whiteboxlayer</a> 0.1.15
 
 ## Reference
 [1] Wesley Maddox et al. (2019). <a href="https://arxiv.org/abs/1902.02476">A Simple Baseline for Bayesian Uncertainty in Deep Learning</a>. arXiv preprint arXiv:1902.02476.
