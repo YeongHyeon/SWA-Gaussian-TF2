@@ -3,6 +3,7 @@ import numpy as np
 import tensorflow as tf
 import source.utils as utils
 import whiteboxlayer.layers as wbl
+import whiteboxlayer.extensions.utility as wblu
 
 class Agent(object):
 
@@ -57,7 +58,7 @@ class Agent(object):
         conc_func = self.__model.__call__.get_concrete_function(tf.TensorSpec(shape=(1, self.dim_h, self.dim_w, self.dim_c), dtype=tf.float32))
 
         # initialize moments
-        theta = self.get_weight_stack()
+        theta = wblu.get_allweight(self.__model)
         self.theta_1 = theta
         self.theta_2 = theta**2
         self.theta_d = [theta - self.theta_1]
@@ -97,7 +98,7 @@ class Agent(object):
 
         if(training):
             # update moments
-            theta = self.get_weight_stack()
+            theta = wblu.get_allweight(self.__model)
             self.theta_1 = (num_model*self.theta_1 + theta) / (num_model + 1)
             self.theta_2 = (num_model*(self.theta_2**2) + theta**2) / (num_model + 1)
             self.theta_d.append(theta - self.theta_1)
@@ -109,28 +110,10 @@ class Agent(object):
             for idx_sample in range(min(num_sample, len(self.theta_bank))):
                 tmp_sample = utils.bayesian_sampling(theta_bank=self.theta_bank[idx_sample])
 
-                idx_numparam = 0
-                for idx_pkey, name_pkey in enumerate(self.list_pkey):
-                    tmp_shape = list(self.__model.layer.parameters[name_pkey].shape)
-
-                    tmp_numparam = 1
-                    for val_shape in tmp_shape:
-                        tmp_numparam *= val_shape
-
-                    tmp_constant = self.__model.layer.parameters[name_pkey].numpy() * 0
-                    self.__model.layer.parameters[name_pkey].assign(tmp_sample[idx_numparam:idx_numparam+tmp_numparam].reshape(tmp_shape))
-                    idx_numparam += tmp_numparam
+                self.__model = wblu.set_allweight(self.__model, new_weight=tmp_sample)
 
                 self.save_params(model='model_history_%d' %(idx_sample))
             self.load_params(model='backup')
-
-    def get_weight_stack(self):
-
-        theta_stack = []
-        for idx_pkey, name_pkey in enumerate(self.list_pkey):
-            theta_stack.append(self.__model.layer.parameters[name_pkey].numpy().flatten())
-
-        return np.hstack(theta_stack) # as vector
 
     def save_params(self, model='base'):
 

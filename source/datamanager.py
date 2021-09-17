@@ -18,7 +18,7 @@ class DataSet(object):
 
     def __preparing(self):
         (x_tr, y_tr), (x_te, y_te) = tf.keras.datasets.mnist.load_data()
-        self.x_tr, self.y_tr = x_tr, y_tr
+        self.x_tr, self.y_tr = x_tr[:100], y_tr[:100]
         self.x_tr, self.y_tr = shuffle(self.x_tr, self.y_tr)
 
         num_tr = int(self.x_tr.shape[0] * 0.1)
